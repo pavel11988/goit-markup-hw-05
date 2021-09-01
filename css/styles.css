@@ -688,6 +688,8 @@ img {
 .project-thumb {
   position: relative;
   display: flex;
+  overflow: hidden;
+
 }
 
 .project-card-text-overlay {
@@ -699,23 +701,23 @@ img {
 
   padding: 63px 24px;
 
-  opacity: 0;
-
   font-size: 18px;
   line-height: 1.56;
+
+  transform: translateY(+100%);
+
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
 
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
 .projects-card:hover .project-card-text-overlay,
 .projects-card:focus .project-card-text-overlay {
-  opacity: 1;
-
-}
+  transform: translateY(0);
+} 
 
 /* Модальное окно */
 
